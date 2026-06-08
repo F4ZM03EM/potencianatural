@@ -1,588 +1,412 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-MZ">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Segredos de um Amor Inabalável | Descoberta Interior</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truque do Gengibre - Oficial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- UTMify Script -->
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      data-utmify-prevent-xcod-sck
+      data-utmify-prevent-subids
+      async
+      defer
+    ></script>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        
         body {
-            font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, 'Georgia', serif;
-            background: linear-gradient(145deg, #fff9f7 0%, #fff0ed 100%);
-            color: #3e2a2f;
-            scroll-behavior: smooth;
-            line-height: 1.5;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        section {
-            padding: 60px 0 40px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeUp 0.8s ease forwards;
-        }
-
-        @keyframes fadeUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .btn {
-            display: inline-block;
-            background: #e34b6d;
-            color: white;
-            font-weight: bold;
-            padding: 14px 32px;
-            border-radius: 60px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 8px 18px rgba(227, 75, 109, 0.3);
-            letter-spacing: 0.5px;
-        }
-
-        .btn:hover {
-            background: #c73b5a;
-            transform: scale(1.02);
-            box-shadow: 0 12px 24px rgba(227, 75, 109, 0.4);
-        }
-
-        .hero {
-            text-align: center;
-            padding: 80px 0 60px;
-            background: radial-gradient(circle at 10% 30%, rgba(255,215,215,0.5), transparent);
-        }
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #b13e5a, #e6778f);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        .hero p {
-            font-size: 1.3rem;
-            color: #5b3e44;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        @media (max-width: 700px) {
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1.1rem; }
-        }
-
-        .quiz-card {
-            background: white;
-            border-radius: 48px;
-            padding: 30px 28px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            margin: 20px 0;
-            text-align: center;
-            transition: all 0.3s;
-        }
-        .progress-bar {
-            background: #ffe0e6;
-            border-radius: 40px;
-            height: 8px;
-            width: 100%;
-            margin: 10px 0 30px;
-        }
-        .progress-fill {
-            background: #e34b6d;
-            width: 0%;
-            height: 8px;
-            border-radius: 40px;
-            transition: width 0.3s ease;
-        }
-        .question-text {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin: 25px 0;
-            color: #2c1e22;
-        }
-        .options {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin: 30px 0 20px;
-        }
-        .opt-btn {
-            background: #fef1f4;
-            border: 1px solid #ffc1ce;
-            padding: 12px 28px;
-            border-radius: 60px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: 0.2s;
-            color: #962d48;
-        }
-        .opt-btn:hover {
-            background: #ffe0e6;
-            transform: translateY(-2px);
-        }
-        .quiz-footer {
-            font-size: 0.9rem;
-            color: #b2828f;
-            margin-top: 20px;
-        }
-
-        .result-box {
-            background: #fff3f0;
-            border-radius: 48px;
-            padding: 40px 30px;
-            text-align: center;
-            margin: 30px 0;
-        }
-        .result-text {
-            font-size: 1.6rem;
-            font-weight: 500;
-            color: #ac3f5a;
-            margin-bottom: 20px;
-        }
-        .result-detail {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f4;
         }
 
         .video-wrapper {
-            background: #00000010;
-            border-radius: 32px;
+            max-width: 100%;
+            background: #000;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
             overflow: hidden;
-            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
-            margin: 30px 0;
             position: relative;
+            padding-bottom: 56.25%; /* Aspect ratio 16:9 for responsive video */
+            height: 0;
         }
-        iframe {
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            aspect-ratio: 16 / 9;
-            border: none;
+            height: 100%;
+            border: 0;
         }
 
-        /* Provas sociais - mais realistas com fotos de avatar realistas e detalhes */
-        .testimonials {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 28px;
-            justify-content: center;
-            margin: 50px 0 40px;
-        }
-        .testimonial {
-            background: white;
-            border-radius: 28px;
-            padding: 24px;
-            width: 320px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-            border: 1px solid #ffe2e9;
-            transition: transform 0.2s;
-        }
-        .testimonial:hover {
-            transform: translateY(-3px);
-        }
-        .testi-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 14px;
-        }
-        .testi-avatar {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            object-fit: cover;
-            background: #f0d5dc;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-        }
-        .testi-info {
-            flex: 1;
-        }
-        .testi-name {
-            font-weight: 800;
-            color: #2c1e22;
-            font-size: 1rem;
-        }
-        .testi-date {
-            font-size: 0.7rem;
-            color: #b77f8c;
-            margin-top: 2px;
-        }
-        .testi-stars {
-            color: #ffb347;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-        }
-        .testi-text {
-            font-style: normal;
-            color: #4a343a;
-            line-height: 1.45;
-            font-size: 0.95rem;
-        }
-        .testi-verified {
-            margin-top: 10px;
-            font-size: 0.7rem;
-            color: #34a853;
-            display: flex;
-            align-items: center;
-            gap: 4px;
+        .btn-pulse {
+            animation: pulse 2s infinite;
         }
 
-        /* Botão final CTA bem atrativo */
-        .final-cta-wrapper {
-            text-align: center;
-            margin: 20px 0 60px;
-        }
-        .btn-final {
-            background: linear-gradient(95deg, #e34b6d, #c7365a);
-            font-size: 1.5rem;
-            padding: 18px 48px;
-            box-shadow: 0 15px 30px rgba(227, 75, 109, 0.5);
-            transition: 0.2s;
-            border: none;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
-        .btn-final:hover {
-            transform: scale(1.03);
-            background: linear-gradient(95deg, #d43f62, #b52e4e);
-            box-shadow: 0 20px 35px rgba(227, 75, 109, 0.6);
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
         }
 
-        footer {
-            text-align: center;
-            padding: 30px 0;
-            font-size: 0.8rem;
-            color: #c0919f;
+        #notification-toast {
+            transition: all 0.5s ease-in-out;
+            transform: translateX(-150%);
         }
-        .fade-quiz {
-            transition: opacity 0.3s;
+
+        #notification-toast.show {
+            transform: translateX(0);
+        }
+
+        .hidden-section {
+            display: none;
+        }
+
+        .headline-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .fb-comment-name {
+            color: #385898;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .fb-comment-name:hover {
+            text-decoration: underline;
+        }
+        .fb-comment-text {
+            color: #1c1e21;
+            font-size: 14px;
+            line-height: 1.38;
+        }
+        .fb-comment-actions {
+            font-size: 12px;
+            color: #8d949e;
+            font-weight: 700;
+        }
+        .fb-comment-actions span {
+            cursor: pointer;
+        }
+        .fb-comment-actions span:hover {
+            text-decoration: underline;
+        }
+
+        /* Additional video container for the second video */
+        .panda-video-container {
+            max-width: 100%;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .panda-video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* CTA Button styles */
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body>
+<body class="text-gray-900">
 
-<div class="container">
-
-    <!-- HERO -->
-    <section class="hero" id="hero">
-        <h1>❤️ O amor que você merece não precisa doer assim... ❤️</h1>
-        <p>Quantas noites você já passou em claro, sentindo que estava se despedaçando por dentro?<br>
-        Aquela sensação de que, por mais que tente, algo está fora do lugar...<br>
-        <strong>E se você pudesse entender o segredo por trás de um amor inabalável — que ninguém te contou?</strong></p>
-        <button class="btn" id="startQuizBtn">👉 Descobrir a verdade sobre meu relacionamento 👈</button>
-    </section>
-
-    <!-- QUIZ PSICOLÓGICO -->
-    <div id="quizSection" style="display: none;">
-        <div class="quiz-card" id="quizCard">
-            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-            <div id="questionArea">
-                <div class="question-text" id="questionText"></div>
-                <div class="options" id="optionsContainer"></div>
-            </div>
-            <div class="quiz-footer">💭 responda com o coração — não existe resposta certa ou errada</div>
+    <!-- 1. Urgency Timer (TOP) -->
+    <div class="bg-red-600 text-white py-4 shadow-lg border-b-2 border-red-700">
+        <div class="max-w-4xl mx-auto flex flex-col items-center justify-center gap-1">
+            <span class="font-bold text-xs md:text-sm uppercase tracking-widest opacity-90 text-center">Atenção: Esta oferta única expira em</span>
+            <div id="timer" class="text-4xl md:text-5xl font-black tabular-nums tracking-tighter">23:00</div>
         </div>
     </div>
 
-    <!-- RESULTADO PERSONALIZADO -->
-    <div id="resultSection" style="display: none;">
-        <div class="result-box">
-            <div class="result-text" id="resultTitle"></div>
-            <div class="result-detail" id="resultMessage"></div>
-            <button class="btn" id="nextToVSLBtn">👉 Quero entender mais profundamente 👈</button>
+    <!-- 2. Headline Image Section (MIDDLE) -->
+    <header class="bg-white py-6 md:py-10 px-4 border-b">
+        <div class="max-w-4xl mx-auto">
+            <img src="https://i.postimg.cc/hj4gDRYr/HEADLINE-(1).png" alt="Headline Truque do Gengibre" class="headline-img" onerror="this.style.display='none'">
+        </div>
+    </header>
+
+    <!-- 3. VSL Section -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        
+        <!-- Vídeo Principal com Pandavideo (REATIVADO)
+        <div class="video-wrapper mb-6">
+            <iframe src="https://player-vz-f9150b0d-544.tv.pandavideo.com/embed/?v=05d51158-66d9-48c9-b2b9-2e86df0631a9" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen 
+                    title="Vídeo Principal Truque do Gengibre">
+            </iframe>
+        </div> -->
+        <!-- Segundo vídeo (adicional) com Pandavideo -->
+        <div class="mb-10 flex justify-center">
+            <div class="panda-video-container" style="max-width: 400px; width: 100%; ">
+                <iframe src="https://player-vz-f9150b0d-544.tv.pandavideo.com/embed/?v=05d51158-66d9-48c9-b2b9-2e86df0631a9" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen 
+                        title="Vídeo Adicional Truque do Gengibre">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- CTA Button que aparecerá após 10 minutos (600 segundos) -->
+        <div id="cta-section" class="hidden-section text-center mb-16">
+            <a href="https://pay.kambafy.com/checkout/db866106-622b-46d4-9b2e-3dceaeb11052" 
+               id="cta-link"
+               class="cta-button btn-pulse inline-block bg-green-600 hover:bg-green-700 text-white text-xl md:text-3xl font-black py-6 px-10 rounded-2xl transition duration-300 uppercase shadow-2xl w-full md:w-auto text-center"
+               target="_blank"
+               rel="noopener noreferrer">
+                PAGAR AGORA
+            </a>
+        </div>
+
+        <!-- 4. Social Proof (Facebook Style) -->
+        <section class="bg-white rounded-lg p-6 shadow-sm mb-12 border border-gray-300">
+            <div class="flex items-center justify-between border-b border-gray-200 pb-3 mb-6">
+                <h3 class="font-bold text-lg text-gray-800">1.249 comentários</h3>
+                <span class="text-blue-600 font-semibold text-sm cursor-pointer">Ordenar por mais recentes</span>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Comentário 1: Fernando Matsinhe -->
+                <div class="flex gap-3">
+                    <img src="https://i.postimg.cc/QtWtG3Kp/images-(3).jpg" class="w-12 h-12 rounded-full flex-shrink-0 bg-gray-200 object-cover" alt="Fernando Matsinhe" onerror="this.src='https://ui-avatars.com/api/?name=Fernando+Matsinhe&background=random'">
+                    <div class="flex-1">
+                        <div class="bg-[#f0f2f5] px-4 py-2 rounded-[18px]">
+                            <p class="fb-comment-name">Fernando Matsinhe</p>
+                            <p class="fb-comment-text">Isso realmente funciona! No início fiquei na dúvida, mas depois de testar esse truque do pau de cavalo, minha vida na cama mudou totalmente. Minha esposa agora nem acredita kkkkkk. Valeu muito a pena!</p>
+                        </div>
+                        <div class="fb-comment-actions mt-1 ml-3 flex gap-4">
+                            <span>Gostar</span>
+                            <span>Responder</span>
+                            <span class="font-normal">há 4 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comentário 2: Palatos Cossa -->
+                <div class="flex gap-3">
+                    <img src="https://i.postimg.cc/j27JXfhn/images-(1).jpg" class="w-12 h-12 rounded-full flex-shrink-0 bg-gray-200 object-cover" alt="Palatos Cossa" onerror="this.src='https://ui-avatars.com/api/?name=Palatos+Cossa&background=0056b3&color=fff'">
+                    <div class="flex-1">
+                        <div class="bg-[#f0f2f5] px-4 py-2 rounded-[18px]">
+                            <p class="fb-comment-name">Palatos Cossa</p>
+                            <p class="fb-comment-text">Assisti o vídeo até ao fim e apliquei hoje mesmo. Meu Deus, que diferença! Estava quase a desistir de procurar solução. Valeu cada cêntimo o investimento, podem comprar sem medo malta!</p>
+                        </div>
+                        <div class="fb-comment-actions mt-1 ml-3 flex gap-4">
+                            <span>Gostar</span>
+                            <span>Responder</span>
+                            <span class="font-normal">há 8 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comentário 3: Alberto Cossa -->
+                <div class="flex gap-3">
+                    <img src="https://i.postimg.cc/pVJv9rvy/images.jpg" class="w-12 h-12 rounded-full flex-shrink-0 bg-gray-200 object-cover" alt="Alberto Cossa" onerror="this.src='https://ui-avatars.com/api/?name=Alberto+Cossa&background=random'">
+                    <div class="flex-1">
+                        <div class="bg-[#f0f2f5] px-4 py-2 rounded-[18px]">
+                            <p class="fb-comment-name">Alberto Cossa</p>
+                            <p class="fb-comment-text">Obrigado por partilharem esse vídeo. Estava a passar por momentos difíceis no meu casamento por causa da rapidez. Agora aguento mais de 30 minutos tranquilo. Mudou tudo aqui em casa.</p>
+                        </div>
+                        <div class="fb-comment-actions mt-1 ml-3 flex gap-4">
+                            <span>Gostar</span>
+                            <span>Responder</span>
+                            <span class="font-normal">há 12 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comentário 4: Ricardo Mabunda -->
+                <div class="flex gap-3">
+                    <img src="https://i.postimg.cc/BvHyd7QY/images-(12).jpg" class="w-12 h-12 rounded-full flex-shrink-0 bg-gray-200 object-cover" alt="Ricardo Mabunda" onerror="this.src='https://ui-avatars.com/api/?name=Ricardo+Mabunda&background=random'">
+                    <div class="flex-1">
+                        <div class="bg-[#f0f2f5] px-4 py-2 rounded-[18px]">
+                            <p class="fb-comment-name">Ricardo Mabunda</p>
+                            <p class="fb-comment-text">Simplesmente fenomenal. Resultados rápidos e naturais. Sinto-me com a energia de um jovem de 20 anos. Podem confiar bradas, o truque é real!</p>
+                        </div>
+                        <div class="fb-comment-actions mt-1 ml-3 flex gap-4">
+                            <span>Gostar</span>
+                            <span>Responder</span>
+                            <span class="font-normal">há 26 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comentário 5: Samuel Tembe -->
+                <div class="flex gap-3">
+                    <img src="https://i.postimg.cc/pXrS2LL9/images-(2).jpg" class="w-12 h-12 rounded-full flex-shrink-0 bg-gray-200 object-cover" alt="Samuel Tembe" onerror="this.src='https://ui-avatars.com/api/?name=Samuel+Tembe&background=random'">
+                    <div class="flex-1">
+                        <div class="bg-[#f0f2f5] px-4 py-2 rounded-[18px]">
+                            <p class="fb-comment-name">Samuel Tembe</p>
+                            <p class="fb-comment-text">Eu já tinha tentado de tudo, até comprimidos que faziam mal ao coração. Esse método é a única coisa que funcionou de verdade e sem efeitos secundários. Recomendo 100%.</p>
+                        </div>
+                        <div class="fb-comment-actions mt-1 ml-3 flex gap-4">
+                            <span>Gostar</span>
+                            <span>Responder</span>
+                            <span class="font-normal">há 1 hora</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center pt-4">
+                    <button class="text-blue-600 font-bold text-sm hover:underline">Carregar mais 10 comentários...</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t py-12 px-4 text-center text-gray-400 text-xs">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <p>© 2024 Truque do Gengibre Moçambique. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Pop-up de Notificações -->
+    <div id="notification-toast" class="fixed bottom-4 left-4 z-[100] bg-white border border-gray-200 p-3 rounded-xl shadow-2xl flex items-center gap-3 max-w-[300px] pointer-events-none">
+        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+            <svg class="text-white w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm3.707 9.293a1 1 0 01-1.414 1.414L9 10.586 7.707 9.293a1 1 0 01-1.414 1.414l2 2a1 1 0 011.414 0l4-4z"></path></svg>
+        </div>
+        <div>
+            <p id="notif-text" class="text-[13px] font-bold text-gray-800 leading-tight">...</p>
+            <p id="notif-location" class="text-[11px] text-gray-400">Moçambique • Verificado ✓</p>
         </div>
     </div>
 
-    <!-- VSL + PROVAS SOCIAIS + BOTÃO FINAL (link direto) -->
-    <div id="vslSection" style="display: none;">
-        <!-- Vídeo com possibilidade de personalizar link e capa, play automático -->
-        <div class="video-wrapper" id="videoWrapper">
-            <iframe id="vslIframe" src="https://www.image2url.com/r2/default/videos/1777157596922-51bbb4d4-fb1f-460f-ac54-36ada9c357a1.mp4" title="VSL Amor Inabalável" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+    <script>
+        window.onload = function() {
+            // CONFIGURAÇÃO: Tempo em segundos para o botão aparecer (600 segundos = 10 minutos)
+            const SECONDS_TO_SHOW_BUTTON = 600; // 10 minutos
+            
+            setTimeout(() => {
+                const ctaSection = document.getElementById('cta-section');
+                if(ctaSection) {
+                    ctaSection.classList.remove('hidden-section');
+                    
+                    // Adicionar um efeito sutil de destaque quando o botão aparecer
+                    const button = document.getElementById('cta-link');
+                    if(button) {
+                        button.style.animation = 'pulse 2s infinite';
+                        // Pequeno som de notificação visual (opcional: console log)
+                        console.log('Botão PAGAR AGORA disponível!');
+                    }
+                }
+            }, SECONDS_TO_SHOW_BUTTON * 1000);
 
-    <!-- BOTÃO FINAL ATRATIVO: Link direto sem alert, abre na mesma aba (ou target _blank) -->
-        <div class="final-cta-wrapper">
-            <a href="https://checkout.escalepay.com/7227025" target="_blank" rel="noopener noreferrer" class="btn btn-final" id="directFinalCta">👉 Quero acessar o segredo agora 👈</a>
-        </div>
-    </div>
-
-        <!-- PROVAS SOCIAIS - 8 depoimentos EXTREMAMENTE REALISTAS -->
-        <div class="testimonials" id="realTestimonials">
-            <!-- Depoimento 1 -->
-            <div class="testimonial">
-                <div class="testi-header">
-                    <img class="testi-avatar" src="https://i.postimg.cc/Y2Lyyc4N/img-dg.jpg" alt="avatar">
-                    <div class="testi-info">
-                        <div class="testi-name">Fernanda M.</div>
-                        <div class="testi-date">Há 2 dias • Verificado</div>
-                        <div class="testi-stars">★★★★★</div>
-                    </div>
-                </div>
-                <div class="testi-text">“Eu nunca comento nada, mas isso aqui mexeu demais comigo. Me senti abraçada. Parecia que estava falando diretamente com a minha alma. Recomendo de olhos fechados.”</div>
-                <div class="testi-verified">✓ Compra verificada</div>
-            </div>
-            <!-- Depoimento 2 -->
-            <div class="testimonial">
-                <div class="testi-header">
-                    <img class="testi-avatar" src="https://i.postimg.cc/bN3bxrzb/img-dmg7.jpg" alt="avatar">
-                    <div class="testi-info">
-                        <div class="testi-name">Rafael L.</div>
-                        <div class="testi-date">Há 5 dias</div>
-                        <div class="testi-stars">★★★★★</div>
-                    </div>
-                </div>
-                <div class="testi-text">“Senti como se alguém finalmente me entendesse. Eu estava preso num ciclo de medo de abandono e não sabia. Isso abriu minha mente de uma forma inexplicável.”</div>
-                <div class="testi-verified">✓ Verificado</div>
-            </div>
-            <!-- Depoimento 3 -->
-            <div class="testimonial">
-                <div class="testi-header">
-                    <img class="testi-avatar" src= "https://i.postimg.cc/5yHcsjhX/img-dmg4.jpg" alt="avatar">
-                    <div class="testi-info">
-                        <div class="testi-name">Camila D.</div>
-                        <div class="testi-date">Há 1 semana</div>
-                        <div class="testi-stars">★★★★★</div>
-                    </div>
-                </div>
-                <div class="testi-text">“Esse quiz me trouxe lágrimas. Percebi o quanto me anulo por medo de perder quem eu amo. Obrigada por essa ferramenta, já estou aplicando os insights.”</div>
-                <div class="testi-verified">✓ Compra verificada</div>
-            </div>
-            <!-- Depoimento 4 -->
-            <div class="testimonial">
-                <div class="testi-header">
-                    <img class="testi-avatar" src="https://i.postimg.cc/LhdWvDB5/img-dmg3.jpg" alt="avatar">
-                    <div class="testi-info">
-                        <div class="testi-name">Juliana R.</div>
-                        <div class="testi-date">Há 3 dias</div>
-                        <div class="testi-stars">★★★★★</div>
-                    </div>
-                </div>
-                <div class="testi-text">“Incrível como um simples teste conseguiu me mostrar coisas que terapia não revelou em meses. Me senti acolhida e compreendida. Vida nova!”</div>
-                <div class="testi-verified">✓ Verificado</div>
-            </div>
-            <!-- Depoimento 5 -->
-            <div class="testimonial">
-                <div class="testi-header">
-                    <img class="testi-avatar" src= "https://i.postimg.cc/634J08JG/img-dmg5.jpg" alt="avatar">
-                    <div class="testi-info">
-                        <div class="testi-name">Thiago A.</div>
-                        <div class="testi-date">Há 6 dias</div>
-                        <div class="testi-stars">★★★★★</div>
-                    </div>
-                </div>
-                <div class="testi-text">“Homem também sofre por amor, e esse conteúdo foi cirúrgico. Me ajudou a enxergar meus padrões de apego. Recomendo a todos que buscam um amor saudável.”</div>
-                <div class="testi-verified">✓ Compra verificada</div>
-            </div>
-            <!-- Depoimento 6 -->
-            <div class="testimonial">
-                <div class="testi-header">
-                    <img class="testi-avatar" src="https://i.postimg.cc/DzDR87Jw/img-dmg2.jpg" alt="avatar">
-                    <div class="testi-info">
-                        <div class="testi-name">Patrícia S.</div>
-                        <div class="testi-date">Há 4 dias</div>
-                        <div class="testi-stars">★★★★★</div>
-                    </div>
-                </div>
-                <div class="testi-text">“Depois que terminei o quiz e vi o vídeo, algo clareou dentro de mim. Não estava errada em sentir, só precisava de direção. Gratidão eterna.”</div>
-                <div class="testi-verified">✓ Verificado</div>
-            </div>
-            <!-- Depoimento 7 -->
-            <div class="testimonial">
-                <div class="testi-header">
-                    <img class="testi-avatar" src= "https://i.postimg.cc/xjFN87gW/img-dmg10.jpg" alt="avatar">
-                    <div class="testi-info">
-                        <div class="testi-name">Luciana M.</div>
-                        <div class="testi-date">Há 2 dias</div>
-                        <div class="testi-stars">★★★★★</div>
-                    </div>
-                </div>
-                <div class="testi-text">“Finalmente achei um lugar que fala de amor com profundidade psicológica de verdade. Sem mimimi. Tô emocionada até agora.”</div>
-                <div class="testi-verified">✓ Compra verificada</div>
-            </div>
-            <!-- Depoimento 8 -->
-            <div class="testimonial">
-                <div class="testi-header">
-                    <img class="testi-avatar" src="https://i.postimg.cc/ydyh2Pz2/img-dmg-9.jpg" alt="avatar">
-                    <div class="testi-info">
-                        <div class="testi-name">Carlos E.</div>
-                        <div class="testi-date">Há 12 horas</div>
-                        <div class="testi-stars">★★★★★</div>
-                    </div>
-                </div>
-                <div class="testi-text">“Achei que era mais do mesmo, mas me surpreendi. Acabei comprando o acesso e valeu cada centavo. Minha relação melhorou 80%.”</div>
-                <div class="testi-verified">✓ Verificado</div>
-            </div>
-        </div>
-
-    
-
-    <footer>❤️ Psicologia do amor | Conexão verdadeira ❤️</footer>
-</div>
-
-<script>
-    // ------------------- PERGUNTAS PSICOLÓGICAS (15 questões profundas) -------------------
-    const questions = [
-        { text: "Você sente que, nos relacionamentos, sempre se doa mais do que recebe?", options: ["Sim, sempre", "Às vezes", "Não, é equilibrado"] },
-        { text: "O medo de ser abandonado(a) já fez você agir de forma que se arrependeu depois?", options: ["Sim, muitas vezes", "Raramente", "Nunca senti isso"] },
-        { text: "Quando seu parceiro(a) se distancia um pouco, você imediatamente pensa que algo está errado com você?", options: ["Sim, frequentemente", "De vez em quando", "Não, confio"] },
-        { text: "Você já sentiu que ama tanto alguém que acabou se perdendo dentro desse sentimento?", options: ["Profundamente, sim", "Um pouco", "Não me identifico"] },
-        { text: "Você revê mentalmente conversas e gestos tentando encontrar sinais de que o amor está acabando?", options: ["Sempre faço isso", "Às vezes", "Quase nunca"] },
-        { text: "Você sente que precisa 'merecer' o amor do outro, se esforçando excessivamente?", options: ["Sim, totalmente", "Em algumas situações", "Não, amor não se merece"] },
-        { text: "Já deixou de expressar sua opinião ou desejos por medo de gerar conflito e perder a pessoa?", options: ["Sim, várias vezes", "Ocasionalmente", "Nunca faço isso"] },
-        { text: "Você acredita que 'se ele/ela soubesse quem você realmente é, talvez fosse embora'?", options: ["Sim, tenho esse medo", "Às vezes penso nisso", "Não, sou autêntico"] },
-        { text: "Quando algo dá errado na relação, você tende a se culpar primeiro?", options: ["Sempre", "Com frequência", "Raramente"] },
-        { text: "Você sente que precisa de validação constante do parceiro para se sentir seguro(a)?", options: ["Sim, muito", "Moderadamente", "Não, tenho segurança interna"] },
-        { text: "O medo de ficar sozinho(a) já fez você permanecer em relações que te machucavam?", options: ["Sim, isso já aconteceu", "Talvez uma vez", "Não, jamais"] },
-        { text: "Você sente que ama de forma intensa, mas também sente uma angústia por trás desse amor?", options: ["Sempre sinto", "Às vezes sim", "Não identifico angústia"] },
-        { text: "Quando seu parceiro(a) demora a responder, sua mente cria cenários catastróficos?", options: ["Muitas vezes", "De vez em quando", "Raramente"] },
-        { text: "Você já sentiu que, mesmo amando, existe uma barreira invisível que te impede de se entregar por completo?", options: ["Sim, isso é real", "Já senti algo parecido", "Não, me entrego totalmente"] },
-        { text: "No fundo, você acredita que é digno(a) de um amor inabalável e incondicional?", options: ["Tenho dificuldade de acreditar", "Estou aprendendo", "Sim, plenamente"] }
-    ];
-
-    let currentQuestionIndex = 0;
-    let userAnswers = [];
-    let quizActive = false;
-
-    const heroSection = document.getElementById('hero');
-    const quizSectionDiv = document.getElementById('quizSection');
-    const resultSectionDiv = document.getElementById('resultSection');
-    const vslSectionDiv = document.getElementById('vslSection');
-    const startBtn = document.getElementById('startQuizBtn');
-    const questionTextSpan = document.getElementById('questionText');
-    const optionsContainer = document.getElementById('optionsContainer');
-    const progressFill = document.getElementById('progressFill');
-    const nextToVSLBtn = document.getElementById('nextToVSLBtn');
-
-    // Função para iniciar quiz
-    function initQuiz() {
-        currentQuestionIndex = 0;
-        userAnswers = [];
-        quizActive = true;
-        heroSection.style.display = 'none';
-        quizSectionDiv.style.display = 'block';
-        resultSectionDiv.style.display = 'none';
-        vslSectionDiv.style.display = 'none';
-        renderQuestion();
-    }
-
-    function renderQuestion() {
-        if (!quizActive) return;
-        if (currentQuestionIndex >= questions.length) {
-            finishQuizAndShowResult();
-            return;
-        }
-        const q = questions[currentQuestionIndex];
-        questionTextSpan.innerText = q.text;
-        optionsContainer.innerHTML = '';
-        q.options.forEach(opt => {
-            const btn = document.createElement('button');
-            btn.classList.add('opt-btn');
-            btn.innerText = opt;
-            btn.addEventListener('click', () => {
-                userAnswers.push(opt);
-                currentQuestionIndex++;
-                updateProgress();
-                renderQuestion();
-            });
-            optionsContainer.appendChild(btn);
-        });
-        updateProgress();
-    }
-
-    function updateProgress() {
-        const percent = (currentQuestionIndex / questions.length) * 100;
-        progressFill.style.width = `${percent}%`;
-    }
-
-    function finishQuizAndShowResult() {
-        quizActive = false;
-        quizSectionDiv.style.display = 'none';
-
-        let insecurityScore = 0;
-        let selfAbandonScore = 0;
-        let fearAbandonScore = 0;
-
-        userAnswers.forEach(ans => {
-            if (ans.includes("Sim") || ans.includes("sempre") || ans.includes("muitas vezes") || ans.includes("Sempre") || ans.includes("Muitas vezes")) {
-                insecurityScore += 2;
-                if (ans.includes("perdendo") || ans.includes("doa mais") || ans.includes("culpar")) selfAbandonScore += 1.5;
-                if (ans.includes("abandono") || ans.includes("medo") || ans.includes("catastróficos")) fearAbandonScore += 2;
-            } else if (ans.includes("Às vezes") || ans.includes("Ocasionalmente") || ans.includes("Moderadamente") || ans.includes("De vez em quando")) {
-                insecurityScore += 1;
-                if (ans.includes("perdendo") || ans.includes("doa mais")) selfAbandonScore += 0.7;
+            // Lógica do Cronômetro (23 minutos)
+            let time = 23 * 60;
+            const display = document.getElementById('timer');
+            
+            if (display) {
+                const countdown = setInterval(() => {
+                    let m = Math.floor(time / 60);
+                    let s = time % 60;
+                    display.textContent = `${m < 10 ? '0'+m : m}:${s < 10 ? '0'+s : s}`;
+                    if (time <= 0) {
+                        clearInterval(countdown);
+                        display.textContent = "00:00";
+                    }
+                    time--;
+                }, 1000);
             }
-        });
 
-        let resultTitle = "";
-        let resultMessage = "";
+            // --- SISTEMA DE NOTIFICAÇÕES (Comentários falsos de compra) ---
+            const buyers = [
+                "Ernesto Mabote", "Carlos Cossa", "Anselmo Matavele", "Joaquim Nhantumbo",
+                "Pedro Sitoe", "Armando Machava", "Tomás Zandamela", "Salimo Amisse",
+                "Alberto Chongo", "Nelson Mucavele", "Domingos Bila", "Valter Mahumane",
+                "Ricardo Mavila", "Estêvão Manhique", "Pascoal Mondlane", "Jaime Uamusse",
+                "Sérgio Cuambe", "Cláudio Baloi", "Luís Chissano", "Bento Mucavel",
+                "Arlindo Guambe", "Jeremias Matusse", "Mateus Simbine", "Fabião Chirrime",
+                "Rogério Sumbana", "Celso Mavota", "Edmilson Mabunda", "Gilberto Macuácua",
+                "Inácio Mahanjane", "Hélder Mucanheia"
+            ];
 
-        if (insecurityScore >= 18 || selfAbandonScore > 5 || fearAbandonScore > 6) {
-            resultTitle = "💔 Você ama intensamente, mas está se perdendo dentro disso... 💔";
-            resultMessage = "Seu coração carrega uma ferida silenciosa: o medo de não ser suficiente. Você se entrega, mas no fundo espera ser resgatada(o). O amor se torna uma montanha-russa de ansiedade. A boa notícia? Isso pode ser transformado. Você merece um amor que te fortalece, não que te fragmenta. O segredo está em reconectar com a sua segurança interior — e vamos te mostrar o caminho.";
-        } else if (insecurityScore >= 9) {
-            resultTitle = "🌹 Você tem um apego profundo, mas às vezes a insegurança rouba sua paz 🌹";
-            resultMessage = "Sua capacidade de amar é imensa, mas existe uma voz interna que sussurra 'e se ele/ela for embora?'. Isso faz com que você se esforce demais, se anule ou tolere o que não deveria. A boa notícia: essa dinâmica tem nome e pode ser curada. Você está prestes a descobrir os pilares psicológicos de um amor inabalável.";
-        } else {
-            resultTitle = "✨ Você possui uma alma amorosa, mas talvez guarde bloqueios sutis ✨";
-            resultMessage = "Mesmo parecendo equilibrado(a), pequenas sombras do passado podem impedir que você viva a plenitude de um amor verdadeiro. A conexão emocional que você busca está mais perto do que imagina. Continue e desvende os segredos que farão toda a diferença nos seus relacionamentos.";
-        }
+            const cities = ["Maputo", "Matola", "Beira", "Nampula", "Chimoio", "Quelimane", "Tete", "Pemba", "Xai-Xai", "Inhambane"];
+            const toast = document.getElementById('notification-toast');
+            const txt = document.getElementById('notif-text');
+            const locTxt = document.getElementById('notif-location');
 
-        document.getElementById('resultTitle').innerHTML = resultTitle;
-        document.getElementById('resultMessage').innerHTML = resultMessage;
-        resultSectionDiv.style.display = 'block';
-        resultSectionDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-
-    // Função para ir para VSL (com vídeo com play automático)
-    function goToVSL() {
-        resultSectionDiv.style.display = 'none';
-        vslSectionDiv.style.display = 'block';
-        vslSectionDiv.scrollIntoView({ behavior: 'smooth' });
-        // Garantir que o iframe mantenha o autoplay (já está na src)
-        const iframe = document.getElementById('vslIframe');
-        if (iframe) {
-            // recarregar src para assegurar autoplay caso já tenha sido carregado antes
-            let currentSrc = iframe.src;
-            if (!currentSrc.includes('autoplay=1')) {
-                iframe.src = currentSrc + (currentSrc.includes('?') ? '&autoplay=1' : '?autoplay=1');
+            function shuffle(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
             }
-        }
-    }
 
-    nextToVSLBtn.addEventListener('click', goToVSL);
-    startBtn.addEventListener('click', () => {
-        initQuiz();
-        quizSectionDiv.scrollIntoView({ behavior: 'smooth' });
-    });
+            let shuffledBuyers = shuffle([...buyers]);
+            let currentIndex = 0;
 
-    // O botão final já é um link direto para https://zemi-bolos.lovable.app - sem alert, abre na mesma aba por padrão? target blank definido.
-    // Tudo dentro da conformidade.
+            function showNotification() {
+                if (!toast || !txt || !locTxt) return;
+                
+                if (currentIndex >= shuffledBuyers.length) {
+                    shuffledBuyers = shuffle([...buyers]);
+                    currentIndex = 0;
+                }
 
-    // Opção para customizar link do vídeo e capa (apenas um pequeno campo mental, mas o vídeo atual é otimizado para autoplay)
-    // Para facilitar a edição: basta trocar o src do iframe. Já está com parâmetro autoplay=1
-    // A capa do vídeo é gerenciada pelo YouTube.
-    // ===== Garantir que ao carregar a VSL o vídeo comece a tocar
-    // Nenhum alerta, apenas link direto no botão.
-    window.addEventListener('load', () => {
-        // pré carregar sem problemas
-        document.body.style.opacity = '1';
-    });
-</script>
+                const name = shuffledBuyers[currentIndex];
+                const city = cities[Math.floor(Math.random() * cities.length)];
+                
+                txt.innerText = `${name} acabou de adquirir o Truque do pau de cavalo`;
+                locTxt.innerText = `${city}, Moçambique • Verificado ✓`;
+                
+                toast.classList.add('show');
+                
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 5000);
+
+                currentIndex++;
+            }
+
+            setTimeout(showNotification, 3000);
+            setInterval(showNotification, 60000);
+
+            // Bônus: Detectar quando o usuário chegar perto do final da página para reforçar CTA (opcional)
+            // Isso cria um efeito de "scroll" para mostrar o botão se já estiver visível
+            const checkScroll = () => {
+                const ctaSection = document.getElementById('cta-section');
+                if (ctaSection && !ctaSection.classList.contains('hidden-section')) {
+                    const rect = ctaSection.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    if (rect.top <= windowHeight - 100 && rect.bottom >= 0) {
+                        // O usuário vê o botão, podemos adicionar um pequeno destaque
+                        const btn = document.getElementById('cta-link');
+                        if (btn && !btn.hasAttribute('data-highlighted')) {
+                            btn.setAttribute('data-highlighted', 'true');
+                            // Pequeno brilho extra
+                            btn.style.boxShadow = '0 0 0 0 rgba(34, 197, 94, 0.7)';
+                        }
+                    }
+                }
+            };
+            
+            window.addEventListener('scroll', checkScroll);
+            window.addEventListener('resize', checkScroll);
+        };
+    </script>
 </body>
 </html>
